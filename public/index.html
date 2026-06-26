@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="VEGI14 delivers fresh vegetables and fruits directly from local farmers to your home.">
+    <title>VEGI14 | Fresh From Farmers. Direct To Your Home.</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body>
+    <div id="loader" class="loader"><span></span><strong>VEGI14</strong></div>
+    <header class="site-header">
+      <a class="brand" href="#/"><span>V14</span><strong>VEGI14</strong></a>
+      <nav class="main-nav" id="mainNav">
+        <a href="#/">Home</a>
+        <a href="#/shop">Shop</a>
+        <a href="#/categories">Categories</a>
+        <a href="#/offers">Offers</a>
+        <a href="#/plans">Plans</a>
+        <a href="#/account">Account</a>
+        <a href="#/farmer-program">Farmers</a>
+        <a href="#/delivery-partner">Delivery</a>
+      </nav>
+      <div class="header-actions">
+        <button class="icon-btn" id="themeToggle" title="Toggle dark mode" aria-label="Toggle dark mode">D</button>
+        <button class="icon-btn cart-badge" id="cartButton" title="Cart" aria-label="Cart">Cart<span id="cartCount">0</span></button>
+        <button class="primary small" id="loginButton">Login</button>
+        <button class="icon-btn menu-toggle" id="menuToggle" aria-label="Menu">Menu</button>
+      </div>
+    </header>
+    <main id="app" class="app-shell"></main>
+    <aside class="cart-drawer" id="cartDrawer" aria-hidden="true">
+      <div class="drawer-head">
+        <strong>Your Cart</strong>
+        <button class="icon-btn" id="closeCart" aria-label="Close cart">x</button>
+      </div>
+      <div id="cartPanel"></div>
+    </aside>
+    <div class="modal" id="authModal" aria-hidden="true">
+      <div class="modal-card">
+        <button class="icon-btn modal-close" id="closeAuth" aria-label="Close login">x</button>
+        <h2>Mobile OTP Login</h2>
+        <p>Use development OTP <strong>141414</strong> after requesting it locally.</p>
+        <form id="otpForm" class="stack-form">
+          <input name="phone" placeholder="+91 mobile number" required>
+          <select name="role">
+            <option value="customer">Customer</option>
+            <option value="farmer">Farmer</option>
+            <option value="delivery">Delivery Partner</option>
+          </select>
+          <input name="name" placeholder="Your name">
+          <input name="otp" placeholder="OTP">
+          <button class="primary" type="submit">Continue</button>
+        </form>
+      </div>
+    </div>
+    <script src="js/app.js" type="module"></script>
+  </body>
+</html>
